@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miranda Seguros – Corretora de Seguros em Goiana-PE</title>
+<meta name="description" content="Corretora de seguros em Goiana-PE desde 2002. Seguro auto, vida, plano de saúde, residencial, empresarial e mais. Cotação rápida pelo WhatsApp.">
+<meta property="og:title" content="Miranda Seguros – Sua segurança é aqui">
+<meta property="og:description" content="Seguro auto, vida, plano de saúde, residencial e empresarial. Atendimento personalizado em Goiana-PE.">
+<meta property="og:image" content="assets/logo-vertical.png">
+<meta name="theme-color" content="#0a6ab5">
+<link rel="icon" href="assets/brasao.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0a6ab5; --blue-dark:#0b3f6b; --teal:#3bb3a6; --teal-light:#e8f6f4;
+  --ink:#1c2733; --muted:#5b6876; --line:#e3e8ee; --bg:#ffffff; --bg-soft:#f5f8fb;
+  --grad:linear-gradient(135deg,var(--blue) 0%,var(--teal) 100%);
+  --radius:16px; --shadow:0 10px 30px rgba(11,63,107,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+h1,h2,h3{line-height:1.2;color:var(--blue-dark)}
+h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;margin-bottom:14px}
+.lead{color:var(--muted);font-size:1.05rem;max-width:640px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 20px rgba(10,106,181,.25)}
+.btn-whats{background:#25d366;color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.25)}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--blue-dark)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:48px;width:auto}
+.brand b{display:block;font-size:1.3rem;font-weight:800;color:var(--blue);line-height:1}
+.brand small{display:block;font-size:.66rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-top:4px}
+.menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:.92rem}
+.menu a:not(.btn):hover{color:var(--blue)}
+.menu .btn{padding:10px 20px}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:24px;height:2px;background:var(--blue-dark);margin:5px 0;border-radius:2px}
+
+/* Hero */
+.hero{background:var(--grad);color:#fff;padding:96px 0 110px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:rgba(255,255,255,.07)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;position:relative;z-index:1}
+.hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:800;margin-bottom:20px}
+.hero p{font-size:1.12rem;opacity:.95;max-width:560px;margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:28px;margin-top:44px}
+.hero-badges div{font-size:.85rem;opacity:.95}
+.hero-badges strong{display:block;font-size:1.6rem;font-weight:800}
+.hero-card{background:#fff;border-radius:24px;padding:36px;box-shadow:0 30px 60px rgba(0,0,0,.18);color:var(--ink);text-align:center}
+.hero-card img{width:150px;margin:0 auto 16px}
+.hero-card h3{font-size:1.15rem;margin-bottom:6px}
+.hero-card p{font-size:.92rem;color:var(--muted);margin:0 0 18px}
+
+/* Produtos */
+.grid{display:grid;gap:22px}
+.produtos-destaque{grid-template-columns:repeat(3,1fr);margin-top:48px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,63,107,.12)}
+.icon{width:56px;height:56px;border-radius:14px;background:var(--teal-light);color:var(--blue);display:grid;place-items:center;margin-bottom:18px}
+.icon svg{width:28px;height:28px}
+.card h3{font-size:1.2rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card .link{margin-top:18px;font-weight:700;color:var(--blue);font-size:.9rem}
+.card .link:hover{color:var(--teal)}
+.carteira{grid-template-columns:repeat(4,1fr);margin-top:28px}
+.mini{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:600;font-size:.95rem;transition:border-color .2s,color .2s}
+.mini:hover{border-color:var(--teal);color:var(--blue)}
+.mini .icon{width:42px;height:42px;margin:0;border-radius:10px;flex:none}
+.mini .icon svg{width:22px;height:22px}
+.sub-title{margin-top:64px;font-size:1.3rem;font-weight:700;color:var(--blue-dark)}
+
+/* Por que */
+.soft{background:var(--bg-soft)}
+.porque{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.lista{list-style:none;display:grid;gap:18px;margin-top:28px}
+.lista li{display:flex;gap:14px}
+.lista .check{flex:none;width:28px;height:28px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;margin-top:2px}
+.lista .check svg{width:16px;height:16px}
+.lista b{display:block;color:var(--blue-dark)}
+.lista span{color:var(--muted);font-size:.95rem}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--teal)}
+.stat strong{display:block;font-size:2.2rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:.92rem}
+
+/* Sobre */
+.sobre{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.sobre-foto{border-radius:24px;aspect-ratio:1/1;position:relative;box-shadow:var(--shadow)}
+.sobre-foto img{width:100%;height:100%;object-fit:cover;border-radius:24px}
+.sobre-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;border-radius:0 0 24px 24px;background:linear-gradient(to top,rgba(8,32,56,.85),rgba(8,32,56,0))}
+.sobre-foto .tag{position:absolute;bottom:20px;left:24px;right:24px;z-index:1;color:#fff;font-size:.9rem;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.sobre-foto .tag b{color:#fff;display:block;font-size:1.15rem}
+.sobre p{color:var(--muted);margin-bottom:16px}
+blockquote{border-left:4px solid var(--teal);padding:8px 0 8px 20px;font-style:italic;color:var(--blue-dark);margin:24px 0;font-weight:500}
+.mvv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.mvv div{background:var(--bg-soft);border-radius:14px;padding:20px}
+.mvv b{color:var(--blue);display:block;margin-bottom:6px}
+.mvv p{font-size:.86rem;margin:0}
+
+/* Depoimentos */
+.depo-grid{grid-template-columns:repeat(3,1fr);margin-top:48px}
+.depo{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);position:relative}
+.depo::before{content:"\201C";position:absolute;top:6px;right:22px;font-size:5rem;line-height:1;color:var(--teal-light);font-family:Georgia,serif}
+.stars{color:#f5b301;letter-spacing:2px;margin-bottom:12px}
+.depo p{color:var(--ink);font-size:.97rem;margin-bottom:18px;position:relative}
+.depo b{color:var(--blue-dark);display:block}
+.depo small{color:var(--muted)}
+
+/* Parceiras */
+.parceiras{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:36px}
+.parceiras span{padding:14px 24px;border:1px solid var(--line);border-radius:999px;font-weight:700;color:var(--blue-dark);background:#fff;font-size:.95rem}
+
+/* Cotação */
+.cotacao{background:var(--grad);color:#fff}
+.cotacao-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.cotacao h2{color:#fff}
+.cotacao .lead{color:rgba(255,255,255,.92)}
+form{background:#fff;border-radius:24px;padding:34px;box-shadow:0 30px 60px rgba(0,0,0,.15);color:var(--ink);display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-size:.82rem;font-weight:700;color:var(--blue-dark);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+textarea{resize:vertical;min-height:90px}
+form .btn{justify-content:center;width:100%}
+.form-note{font-size:.78rem;color:var(--muted);text-align:center}
+
+/* Contato */
+.contato-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.contato-grid .card{align-items:flex-start}
+.contato-grid a.card-link{color:var(--blue);font-weight:700}
+.mapa{margin-top:28px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);height:340px}
+.mapa iframe{width:100%;height:100%;border:0}
+
+/* Footer */
+footer{background:var(--blue-dark);color:rgba(255,255,255,.8);padding:56px 0 28px;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;margin-bottom:14px;font-size:1rem}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:#fff}
+.foot-brand img{height:56px;filter:brightness(0) invert(1);margin-bottom:14px}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.82rem}
+
+/* WhatsApp flutuante */
+.whats-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,.2);transition:transform .2s}
+.whats-float:hover{transform:scale(1.08)}
+.whats-float svg{width:32px;height:32px;fill:#fff}
+
+/* Responsivo */
+@media (max-width:980px){
+  .hero-grid,.porque,.sobre,.cotacao-grid{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .produtos-destaque,.depo-grid,.contato-grid{grid-template-columns:1fr 1fr}
+  .carteira{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .sobre-foto{max-width:380px;margin-bottom:24px}
+}
+@media (max-width:760px){
+  section{padding:64px 0}
+  .burger{display:block}
+  .menu{position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;border-bottom:1px solid var(--line);display:none}
+  .menu.open{display:flex}
+  .menu a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:14px;justify-content:center}
+  .produtos-destaque,.depo-grid,.contato-grid,.carteira,.mvv,.row,.foot{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .hero{padding:64px 0 76px}
+  .brand img{height:42px}
+  .sobre-foto .tag{left:18px;bottom:16px;font-size:.78rem}
+  .sobre-foto .tag b{font-size:1rem}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG de ícones reutilizáveis -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-whats" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.37 9.37 0 0 1-1.44-5.01c0-5.19 4.23-9.41 9.42-9.41 2.51 0 4.88.98 6.65 2.76a9.35 9.35 0 0 1 2.75 6.66c0 5.19-4.23 9.41-9.41 9.41m8.01-17.42A11.25 11.25 0 0 0 12.05.75C5.81.75.73 5.83.73 12.07c0 2 .52 3.94 1.51 5.66L.64 23.25l5.65-1.48a11.3 11.3 0 0 0 5.75 1.47h.01c6.24 0 11.32-5.08 11.32-11.32 0-3.02-1.18-5.87-3.31-8.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 17H3v-5l2-5h14l2 5v5h-2M5 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm10 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM9 17h6M3 12h18"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/></symbol>
+    <symbol id="i-health" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M2 21h20M8 8h3M8 12h3M8 16h3"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+    <symbol id="i-bike" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5.5 18a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm13 0a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM5.5 14.5 9 7h5l4.5 7.5M9 7l3.5 7.5h-7M14 7l-1-2h-2"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm7.4-3a7.4 7.4 0 0 0-.1-1.3l2-1.6-2-3.4-2.4 1a7.5 7.5 0 0 0-2.2-1.3L14.3 3h-4l-.4 2.4a7.5 7.5 0 0 0-2.2 1.3l-2.4-1-2 3.4 2 1.6a7.4 7.4 0 0 0 0 2.6l-2 1.6 2 3.4 2.4-1a7.5 7.5 0 0 0 2.2 1.3l.4 2.4h4l.4-2.4a7.5 7.5 0 0 0 2.2-1.3l2.4 1 2-3.4-2-1.6c.1-.4.1-.9.1-1.3Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 2h8a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Zm3 17h2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M9 13l2 2 4-4"/></symbol>
+    <symbol id="i-boat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 17l2 3h14l2-3H3Zm9-14v14M12 4l6 10H12M12 7l-5 7h5M2 21c1.5 0 2.5-1 4-1s2.5 1 4 1 2.5-1 4-1 2.5 1 4 1 2.5-1 4-1"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3 2 20h20L12 3Zm0 6v5m0 3h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5a7 7 0 1 1 14 0C19 14.9 12 21 12 21Zm0-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-13v4l3 2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 6l9 7 9-7"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="brand" aria-label="Miranda Seguros – início">
+      <img src="assets/brasao.png" alt="Brasão Miranda Seguros" width="39" height="48">
+      <span><b>Miranda</b><small>Corretor de Seguros</small></span>
+    </a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
+    <nav class="menu" id="menu">
+      <a href="#seguros">Seguros</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#depoimentos">Clientes</a>
+      <a href="#contato">Contato</a>
+      <a href="#cotacao" class="btn btn-primary">Fazer cotação</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" style="color:#c9f1ec">Corretora de seguros em Goiana-PE</span>
+        <h1>Proteja seus bens e o seu bem maior: você e sua família.</h1>
+        <p>Seguro auto, seguro de vida, plano de saúde e muito mais. Comparamos as principais seguradoras para encontrar a melhor proteção pelo melhor preço para você.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-whats" href="https://wa.me/5581995323757?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20de%20seguro." target="_blank" rel="noopener"><svg><use href="#i-whats"/></svg>Cotar pelo WhatsApp</a>
+          <a class="btn btn-outline" href="#seguros">Conhecer os seguros</a>
+        </div>
+        <div class="hero-badges">
+          <div><strong>+20 anos</strong>de experiência</div>
+          <div><strong>10</strong>seguradoras parceiras</div>
+          <div><strong>SUSEP</strong>201016676</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/logo-vertical.png" alt="Miranda Corretor de Seguros" width="150" height="212">
+        <h3>Sua segurança é aqui</h3>
+        <p>Atendimento próximo e personalizado, do orçamento ao sinistro.</p>
+        <a class="btn btn-primary" href="#cotacao" style="width:100%;justify-content:center">Quero uma cotação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGUROS -->
+  <section id="seguros">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">Nossa carteira de proteção</span>
+        <h2>Somos uma corretora completa</h2>
+        <p class="lead">Trabalhamos com vários ramos de seguro para cuidar da sua família, do seu patrimônio e da sua empresa.</p>
+      </div>
+
+      <div class="grid produtos-destaque">
+        <article class="card">
+          <div class="icon"><svg><use href="#i-heart"/></svg></div>
+          <h3>Seguro de Vida</h3>
+          <p>Não sabemos o que está por vir. Por isso é importante proteger o patrimônio e, principalmente, o futuro da sua família, garantindo estabilidade financeira diante de imprevistos.</p>
+          <a class="link" href="#cotacao" data-produto="Seguro de Vida">Cotar seguro de vida →</a>
+        </article>
+        <article class="card">
+          <div class="icon"><svg><use href="#i-health"/></svg></div>
+          <h3>Plano de Saúde</h3>
+          <p>Mais controle sobre a saúde de toda a família: consultas, exames e emergências com rapidez, ampla rede de médicos e hospitais, sem longas filas de espera. Planos individuais, familiares e empresariais.</p>
+          <a class="link" href="#cotacao" data-produto="Plano de Saúde">Cotar plano de saúde →</a>
+        </article>
+        <article class="card">
+          <div class="icon"><svg><use href="#i-car"/></svg></div>
+          <h3>Seguro Auto</h3>
+          <p>Proteção contra roubo, furto, colisão e danos a terceiros, com assistência 24h. Evite um alto prejuízo diante de um sinistro e dirija com tranquilidade.</p>
+          <a class="link" href="#cotacao" data-produto="Seguro Auto">Cotar seguro auto →</a>
+        </article>
+      </div>
+
+      <h3 class="sub-title">Outros seguros que oferecemos</h3>
+      <div class="grid carteira">
+        <a class="mini" href="#cotacao" data-produto="Seguro Empresarial"><span class="icon"><svg><use href="#i-building"/></svg></span>Seguro Empresarial</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro de Vida Empresarial"><span class="icon"><svg><use href="#i-heart"/></svg></span>Vida Empresarial</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro Residencial"><span class="icon"><svg><use href="#i-home"/></svg></span>Seguro Residencial</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro de Riscos"><span class="icon"><svg><use href="#i-alert"/></svg></span>Seguro de Riscos</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro Bike"><span class="icon"><svg><use href="#i-bike"/></svg></span>Seguro Bike</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro de Máquinas e Equipamentos"><span class="icon"><svg><use href="#i-gear"/></svg></span>Máquinas e Equipamentos</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro de Aparelhos Eletrônicos"><span class="icon"><svg><use href="#i-phone"/></svg></span>Aparelhos Eletrônicos</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro Garantia"><span class="icon"><svg><use href="#i-doc"/></svg></span>Seguro Garantia</a>
+        <a class="mini" href="#cotacao" data-produto="Seguro Náutico"><span class="icon"><svg><use href="#i-boat"/></svg></span>Seguro Náutico</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUE -->
+  <section class="soft">
+    <div class="container porque">
+      <div>
+        <span class="eyebrow">Por que a Miranda Seguros</span>
+        <h2>Proteger sua família é uma das decisões mais importantes</h2>
+        <ul class="lista">
+          <li><span class="check"><svg><use href="#i-check"/></svg></span><div><b>Segurança financeira</b><span>Estabilidade para sua família manter o padrão de vida e cobrir despesas essenciais, como educação e moradia.</span></div></li>
+          <li><span class="check"><svg><use href="#i-check"/></svg></span><div><b>Tranquilidade</b><span>Viva com menos preocupações, sabendo que quem você ama estará amparado em situações adversas.</span></div></li>
+          <li><span class="check"><svg><use href="#i-check"/></svg></span><div><b>Planejamento para o futuro</b><span>Seguros e planos de saúde ajudam a cuidar da saúde e do bem-estar da família a longo prazo.</span></div></li>
+          <li><span class="check"><svg><use href="#i-check"/></svg></span><div><b>Atendimento de verdade</b><span>Você fala direto com o corretor, do orçamento ao momento do sinistro.</span></div></li>
+        </ul>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>2002</strong><span>início das nossas atividades</span></div>
+        <div class="stat"><strong>12+</strong><span>ramos de seguro</span></div>
+        <div class="stat"><strong>10</strong><span>seguradoras e operadoras parceiras</span></div>
+        <div class="stat"><strong>100%</strong><span>atendimento personalizado</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container sobre">
+      <div class="sobre-foto">
+        <img src="assets/gilberto-miranda.jpg" alt="Gilberto Miranda, corretor de seguros da Miranda Seguros" width="900" height="900" loading="lazy">
+        <div class="tag"><b>Gilberto Miranda</b>Corretor de Seguros · SUSEP 201016676</div>
+      </div>
+      <div>
+        <span class="eyebrow">Sobre nós</span>
+        <h2>Experiência que traz confiança</h2>
+        <p>Nossa corretora está no mercado desde 2014, mas nossas atividades começaram em 2002 com outro nome. São mais de 20 anos ajudando famílias e empresas a se protegerem.</p>
+        <p><b style="color:var(--blue-dark)">Gilberto Miranda</b> é formado como Corretor de Seguros pela ENS, graduado em Gestão Financeira pela Estácio, com pós-graduação em Administração e Marketing Esportivo pela Estácio e MBA em Gestão e Práticas em Administração Pública pela Universidade Focus.</p>
+        <blockquote>“Ter um seguro é garantir a proteção e a tranquilidade da sua família, mesmo diante dos imprevistos da vida.”</blockquote>
+        <div class="mvv">
+          <div><b>Missão</b><p>Fornecer soluções de seguros personalizadas e de alta qualidade, protegendo nossos clientes contra imprevistos.</p></div>
+          <div><b>Visão</b><p>Ser a corretora mais confiável e respeitada do mercado, reconhecida pela excelência no atendimento.</p></div>
+          <div><b>Valores</b><p>Integridade, compromisso com o cliente, excelência, inovação, responsabilidade social e colaboração.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="soft">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">Depoimentos</span>
+        <h2>O que falam nossos clientes</h2>
+      </div>
+      <div class="grid depo-grid">
+        <div class="depo">
+          <div class="stars">★★★★★</div>
+          <p>A Miranda Seguros é uma empresa que me dá muita tranquilidade e confiabilidade para garantir meu bem. Sempre que precisei, ela estava presente e foi eficiente na resolução do ocorrido.</p>
+          <b>Dra. Liane</b><small>Cliente</small>
+        </div>
+        <div class="depo">
+          <div class="stars">★★★★★</div>
+          <p>Conheço Gilberto Miranda há muitos anos. Ele é meu corretor de seguros e sinto muita confiança em seu trabalho.</p>
+          <b>Paulo Gordilho</b><small>Cliente Auto, Vida e Saúde</small>
+        </div>
+        <div class="depo">
+          <div class="stars">★★★★★</div>
+          <p>Obrigado, Miranda, por cuidar de mim e da minha família! Tive uma ótima experiência quando precisei.</p>
+          <b>Daniel G.</b><small>Cliente</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCEIRAS -->
+  <section>
+    <div class="container center">
+      <span class="eyebrow">Nossas parceiras</span>
+      <h2>Trabalhamos com as principais companhias</h2>
+      <p class="lead">Comparamos opções entre seguradoras e operadoras de saúde de confiança para encontrar a melhor para você.</p>
+      <div class="parceiras">
+        <span>Porto Seguro</span><span>Bradesco Seguros</span><span>Tokio Marine</span><span>HDI Seguros</span><span>Liberty Seguros</span><span>Mapfre</span><span>Icatu</span><span>Amil</span><span>Hapvida</span><span>Unimed Recife</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COTAÇÃO -->
+  <section id="cotacao" class="cotacao">
+    <div class="container cotacao-grid">
+      <div>
+        <span class="eyebrow" style="color:#c9f1ec">Cotação gratuita</span>
+        <h2>Peça sua cotação sem compromisso</h2>
+        <p class="lead">Preencha os dados ao lado e envie direto para o nosso WhatsApp. Respondemos rapidinho com as melhores opções do mercado.</p>
+        <ul class="lista" style="color:#fff">
+          <li><span class="check" style="background:rgba(255,255,255,.2)"><svg><use href="#i-check"/></svg></span><div><b style="color:#fff">Sem custo</b><span style="color:rgba(255,255,255,.85)">A cotação é gratuita e sem compromisso.</span></div></li>
+          <li><span class="check" style="background:rgba(255,255,255,.2)"><svg><use href="#i-check"/></svg></span><div><b style="color:#fff">Comparação real</b><span style="color:rgba(255,255,255,.85)">Várias seguradoras, uma única conversa.</span></div></li>
+        </ul>
+      </div>
+      <form id="form-cotacao" onsubmit="return enviarCotacao(event)">
+        <div class="row">
+          <div><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome"></div>
+          <div><label for="telefone">Telefone / WhatsApp</label><input id="telefone" name="telefone" type="tel" required autocomplete="tel" placeholder="(81) 9 0000-0000"></div>
+        </div>
+        <div class="row">
+          <div><label for="cidade">Cidade</label><input id="cidade" name="cidade" placeholder="Ex.: Goiana"></div>
+          <div><label for="produto">Tipo de seguro</label>
+            <select id="produto" name="produto" required>
+              <option value="">Selecione…</option>
+              <option>Seguro Auto</option><option>Seguro de Vida</option><option>Plano de Saúde</option><option>Plano de Saúde Empresarial</option>
+              <option>Seguro Residencial</option><option>Seguro Empresarial</option><option>Seguro de Vida Empresarial</option><option>Seguro de Riscos</option>
+              <option>Seguro Bike</option><option>Seguro de Máquinas e Equipamentos</option><option>Seguro de Aparelhos Eletrônicos</option>
+              <option>Seguro Garantia</option><option>Seguro Náutico</option><option>Outro</option>
+            </select>
+          </div>
+        </div>
+        <div><label for="mensagem">Conte um pouco do que precisa</label><textarea id="mensagem" name="mensagem" placeholder="Ex.: carro modelo/ano, quantas vidas no plano de saúde…"></textarea></div>
+        <button class="btn btn-whats" type="submit"><svg><use href="#i-whats"/></svg>Enviar pelo WhatsApp</button>
+        <p class="form-note">Ao enviar, você será direcionado ao WhatsApp da Miranda Seguros. Veja nossa <a href="politica-de-privacidade.html" style="text-decoration:underline">Política de Privacidade</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow">Nos encontre</span>
+        <h2>Estamos à sua disposição</h2>
+        <p class="lead">Ficou com alguma dúvida? Fale com a gente pelo canal que preferir.</p>
+      </div>
+      <div class="contato-grid">
+        <div class="card">
+          <div class="icon"><svg><use href="#i-pin"/></svg></div>
+          <h3>Endereço</h3>
+          <p>Av. Nunes Machado, 106<br>Centro – Goiana-PE</p>
+          <a class="card-link link" href="https://www.google.com/maps/search/?api=1&query=Av.+Nunes+Machado,+106,+Centro,+Goiana+-+PE" target="_blank" rel="noopener">Como chegar →</a>
+        </div>
+        <div class="card">
+          <div class="icon"><svg><use href="#i-whats"/></svg></div>
+          <h3>Telefone e e-mail</h3>
+          <p><a href="tel:+5581995323757">(81) 99532-3757</a><br><a href="mailto:seguros@mirandaseguros.com.br">seguros@mirandaseguros.com.br</a></p>
+          <a class="card-link link" href="https://wa.me/5581995323757" target="_blank" rel="noopener">Chamar no WhatsApp →</a>
+        </div>
+        <div class="card">
+          <div class="icon"><svg><use href="#i-clock"/></svg></div>
+          <h3>Horário</h3>
+          <p>Segunda a sexta-feira<br>Das 8h às 17h30</p>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa – Miranda Seguros" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.%20Nunes%20Machado%2C%20106%2C%20Centro%2C%20Goiana%20-%20PE&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="assets/brasao.png" alt="Miranda Seguros" width="45" height="56">
+        <p>Miranda Seguros – Sua segurança é aqui.<br>Nós estaremos sempre ao seu lado.</p>
+        <p style="margin-top:10px;font-size:.82rem">Corretor responsável: Gilberto Miranda · SUSEP 201016676</p>
+      </div>
+      <div>
+        <h4>Seguros</h4>
+        <ul>
+          <li><a href="#seguros">Seguro Auto</a></li>
+          <li><a href="#seguros">Seguro de Vida</a></li>
+          <li><a href="#seguros">Plano de Saúde</a></li>
+          <li><a href="#seguros">Seguro Residencial</a></li>
+          <li><a href="#seguros">Seguro Empresarial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5581995323757" target="_blank" rel="noopener">(81) 99532-3757</a></li>
+          <li><a href="mailto:seguros@mirandaseguros.com.br">seguros@mirandaseguros.com.br</a></li>
+          <li>Av. Nunes Machado, 106 – Centro, Goiana-PE</li>
+          <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="ano">2026</span> Miranda Seguros · Gilberto Miranda. Todos os direitos reservados.</span>
+      <span>Goiana-PE</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whats-float" href="https://wa.me/5581995323757?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-whats"/></svg></a>
+
+<script>
+  const WHATSAPP = '5581995323757';
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  function toggleMenu(btn){
+    const m = document.getElementById('menu');
+    m.classList.toggle('open');
+    btn.setAttribute('aria-expanded', m.classList.contains('open'));
+  }
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+
+  // Pré-seleciona o tipo de seguro ao clicar em um produto
+  document.querySelectorAll('[data-produto]').forEach(el => el.addEventListener('click', () => {
+    document.getElementById('produto').value = el.dataset.produto;
+  }));
+
+  function enviarCotacao(e){
+    e.preventDefault();
+    const f = e.target;
+    const linhas = [
+      'Olá! Vim pelo site e gostaria de uma cotação.',
+      '',
+      '*Nome:* ' + f.nome.value,
+      '*Telefone:* ' + f.telefone.value,
+      f.cidade.value ? '*Cidade:* ' + f.cidade.value : '',
+      '*Seguro:* ' + f.produto.value,
+      f.mensagem.value ? '*Detalhes:* ' + f.mensagem.value : ''
+    ].filter(Boolean);
+    window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(linhas.join('\n')), '_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
