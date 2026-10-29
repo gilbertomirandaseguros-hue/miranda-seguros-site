@@ -1,4 +1,4 @@
-# Site Miranda Seguros
+# Site Miranda Soluções & Seguros
 
 Site estático (HTML + CSS + um pouco de JavaScript), sem dependências e sem etapa de build.
 
