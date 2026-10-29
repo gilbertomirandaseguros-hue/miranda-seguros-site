@@ -5,7 +5,11 @@ Site estático (HTML + CSS + um pouco de JavaScript), sem dependências e sem et
 ## Estrutura
 - `index.html`: página principal (seguros, sobre, depoimentos, parceiras, cotação e contato)
 - `politica-de-privacidade.html`: política de privacidade (LGPD)
-- `assets/`: logo e brasão
+- `assets/`: logo, brasão, foto e logotipos das seguradoras parceiras (`assets/parceiras/`)
+- `sitemap.xml` e `robots.txt`: para o Google
+
+## Meta Pixel
+Pixel `509239066232998` (conta Miranda Seguros 02). Eventos: PageView, Contact (cliques no WhatsApp) e Lead (formulário de cotação).
 
 ## Formulário de cotação
 O formulário monta uma mensagem e abre o WhatsApp (81) 99532-3757 já com os dados do cliente preenchidos.
