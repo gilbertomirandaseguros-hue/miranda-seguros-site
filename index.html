@@ -164,10 +164,10 @@ blockquote{border-left:4px solid var(--teal);padding:8px 0 8px 20px;font-style:i
 .depo small{color:var(--muted)}
 
 /* Parceiras */
-.parceiras{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:40px}
-.parceira{height:110px;display:grid;place-items:center;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:box-shadow .2s,transform .2s}
+.parceiras{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
+.parceira{flex:0 0 calc((100% - 64px)/5);height:110px;display:grid;place-items:center;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:box-shadow .2s,transform .2s}
 .parceira:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
-.parceira img{max-height:56px;max-width:100%;width:auto;height:auto;object-fit:contain}
+.parceira img{max-height:var(--h,56px);max-width:100%;width:auto;height:auto;object-fit:contain}
 .parceira span{font-weight:800;font-size:1.1rem;color:var(--blue-dark);text-align:center;line-height:1.2}
 
 /* Cotação */
@@ -210,7 +210,7 @@ footer a:hover{color:#fff}
   .hero-grid,.porque,.sobre,.cotacao-grid{grid-template-columns:1fr}
   .hero-card{display:none}
   .produtos-destaque,.depo-grid,.contato-grid{grid-template-columns:1fr 1fr}
-  .parceiras{grid-template-columns:repeat(3,1fr)}
+  .parceira{flex-basis:calc((100% - 32px)/3)}
   .carteira{grid-template-columns:1fr 1fr}
   .foot{grid-template-columns:1fr 1fr}
   .sobre-foto{max-width:380px;margin-bottom:24px}
@@ -224,9 +224,9 @@ footer a:hover{color:#fff}
   .menu .btn{margin-top:14px;justify-content:center}
   .produtos-destaque,.depo-grid,.contato-grid,.carteira,.mvv,.row,.foot{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
-  .parceiras{grid-template-columns:1fr 1fr;gap:12px}
-  .parceira{height:90px;padding:14px}
-  .parceira img{max-height:46px}
+  .parceiras{gap:12px}
+  .parceira{flex-basis:calc((100% - 12px)/2);height:90px;padding:14px}
+  .parceira img{max-height:calc(var(--h,56px) * .8)}
   .hero{padding:64px 0 76px}
   .brand img{height:42px}
   .sobre-foto .tag{left:18px;bottom:16px;font-size:.78rem}
@@ -290,7 +290,7 @@ footer a:hover{color:#fff}
         </div>
         <div class="hero-badges">
           <div><strong>+20 anos</strong>de experiência</div>
-          <div><strong>10</strong>seguradoras parceiras</div>
+          <div><strong>11</strong>seguradoras parceiras</div>
           <div><strong>SUSEP</strong>201016676</div>
         </div>
       </div>
@@ -364,7 +364,7 @@ footer a:hover{color:#fff}
       <div class="stats">
         <div class="stat"><strong>2002</strong><span>início das nossas atividades</span></div>
         <div class="stat"><strong>12+</strong><span>ramos de seguro</span></div>
-        <div class="stat"><strong>10</strong><span>seguradoras e operadoras parceiras</span></div>
+        <div class="stat"><strong>11</strong><span>seguradoras e operadoras parceiras</span></div>
         <div class="stat"><strong>100%</strong><span>atendimento personalizado</span></div>
       </div>
     </div>
@@ -426,17 +426,18 @@ footer a:hover{color:#fff}
       <h2>Trabalhamos com as principais companhias</h2>
       <p class="lead">Comparamos opções entre seguradoras e operadoras de saúde de confiança para encontrar a melhor para você.</p>
       <div class="parceiras">
-        
-        <div class="parceira"><span>Porto Seguro</span></div>
+        <div class="parceira"><img src="assets/parceiras/porto.png" alt="Porto Seguro" loading="lazy" style="--h:72px"></div>
+        <div class="parceira"><img src="assets/parceiras/liberty.png" alt="Liberty Seguros" loading="lazy" style="--h:64px"></div>
+        <div class="parceira"><img src="assets/parceiras/icatu.png" alt="Icatu Seguros" loading="lazy" style="--h:60px"></div>
         <div class="parceira"><img src="assets/parceiras/bradesco.png" alt="Bradesco Seguros" loading="lazy"></div>
         <div class="parceira"><img src="assets/parceiras/tokio.png" alt="Tokio Marine" loading="lazy"></div>
         <div class="parceira"><img src="assets/parceiras/hdi.png" alt="HDI Seguros" loading="lazy"></div>
-        <div class="parceira"><span>Liberty Seguros</span></div>
         <div class="parceira"><img src="assets/parceiras/mapfre.png" alt="Mapfre" loading="lazy"></div>
-        <div class="parceira"><span>Icatu Seguros</span></div>
-        <div class="parceira"><img src="assets/parceiras/amil.png" alt="Amil" loading="lazy" style="max-height:44px"></div>
+        <div class="parceira"><img src="assets/parceiras/amil.png" alt="Amil" loading="lazy" style="--h:44px"></div>
         <div class="parceira"><img src="assets/parceiras/hapvida.png" alt="Hapvida" loading="lazy"></div>
-        <div class="parceira"><img src="assets/parceiras/unimed.png" alt="Unimed Recife" loading="lazy" style="max-height:44px"></div>
+        <div class="parceira"><img src="assets/parceiras/unimed.png" alt="Unimed Recife" loading="lazy" style="--h:44px"></div>
+        <div class="parceira"><img src="assets/parceiras/medsenior.png" alt="MedSênior" loading="lazy" style="--h:54px"></div>
+      </div>
       
       </div>
     </div>
