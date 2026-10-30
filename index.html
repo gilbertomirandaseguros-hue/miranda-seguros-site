@@ -89,6 +89,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdro
 .brand small{display:block;font-size:.66rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-top:4px}
 .menu{display:flex;align-items:center;gap:28px;font-weight:600;font-size:.92rem}
 .menu a:not(.btn):hover{color:var(--blue)}
+.menu .menu-destaque{color:var(--teal)}
 .menu .btn{padding:10px 20px}
 .burger{display:none;background:none;border:0;cursor:pointer;padding:8px}
 .burger span{display:block;width:24px;height:2px;background:var(--blue-dark);margin:5px 0;border-radius:2px}
@@ -267,6 +268,7 @@ footer a:hover{color:#fff}
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu(this)"><span></span><span></span><span></span></button>
     <nav class="menu" id="menu">
       <a href="#seguros">Seguros</a>
+      <a href="plano-de-saude-empresarial.html" class="menu-destaque">Saúde Empresarial</a>
       <a href="#sobre">Sobre nós</a>
       <a href="#depoimentos">Clientes</a>
       <a href="#contato">Contato</a>
@@ -528,6 +530,7 @@ footer a:hover{color:#fff}
           <li><a href="#seguros">Seguro Auto</a></li>
           <li><a href="#seguros">Seguro de Vida</a></li>
           <li><a href="#seguros">Plano de Saúde</a></li>
+          <li><a href="plano-de-saude-empresarial.html">Plano de Saúde Empresarial</a></li>
           <li><a href="#seguros">Seguro Residencial</a></li>
           <li><a href="#seguros">Seguro Empresarial</a></li>
         </ul>
