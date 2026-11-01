@@ -178,6 +178,19 @@ header{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.96);backdro
 .creds li b{display:block;font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 blockquote.missao{font-family:var(--serif);font-size:1.45rem;line-height:1.4;color:var(--navy);border-left:3px solid var(--teal);padding-left:24px;margin-top:36px}
 
+/* Equipe */
+.equipe-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.equipe-head .label{display:block;margin-bottom:16px}
+.equipe-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:32px;align-items:start}
+.membro figure{position:relative;overflow:hidden;border-radius:4px;background:#e9e5de;aspect-ratio:4/5}
+.membro figure img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s}
+.membro:hover figure img{transform:scale(1.03)}
+.membro .tag{position:absolute;left:16px;top:16px;background:var(--navy);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:3px}
+.membro h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:22px 0 4px}
+.membro .cargo{color:var(--teal);font-weight:700;font-size:.9rem}
+.membro p{color:var(--ink-2);font-size:.95rem;margin-top:12px}
+.membro.lider h3{font-size:2rem}
+
 /* Depoimentos */
 .depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
 .depo blockquote{font-family:var(--serif);font-size:1.3rem;line-height:1.45;margin-bottom:24px}
@@ -239,6 +252,10 @@ footer a:hover{color:#fff}
   .sobre-grid{gap:48px}
   .sobre-painel{aspect-ratio:auto;gap:40px;padding:40px 32px}
   .foot{grid-template-columns:1fr 1fr}
+  .equipe-head{grid-template-columns:1fr}
+  .equipe-grid{grid-template-columns:1fr 1fr}
+  .membro.lider{grid-column:1/-1}
+  .membro.lider figure{aspect-ratio:4/3}
 }
 @media (max-width:720px){
   section{padding:72px 0}
@@ -263,6 +280,8 @@ footer a:hover{color:#fff}
   .logos img{height:calc(var(--h,34px) * .8)}
   .creds,.row,.foot{grid-template-columns:1fr}
   form{padding:28px}
+  .equipe-grid{grid-template-columns:1fr}
+  .membro.lider figure,.membro figure{aspect-ratio:4/5}
 }
 </style>
 </head>
@@ -296,6 +315,7 @@ footer a:hover{color:#fff}
       <a href="#seguros">Seguros</a>
       <a href="plano-de-saude-empresarial.html">Saúde Empresarial</a>
       <a href="#sobre">Quem somos</a>
+      <a href="#equipe">Equipe</a>
       <a href="#contato">Contato</a>
       <a href="#contato" class="btn btn-primary">Solicitar cotação</a>
     </nav>
@@ -435,6 +455,38 @@ footer a:hover{color:#fff}
           <li><b>Atuação</b>Goiana e Região Metropolitana do Recife</li>
         </ul>
         <blockquote class="missao">“Ter um seguro é garantir a proteção e a tranquilidade da sua família, mesmo diante dos imprevistos da vida.”</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipe">
+    <div class="container">
+      <div class="equipe-head">
+        <div>
+          <span class="label">Nossa equipe</span>
+          <h2>Pessoas que cuidam <em>de quem você ama.</em></h2>
+        </div>
+        <p class="lead">Atrás de cada apólice existe uma equipe que conhece você pelo nome. Conheça quem vai te atender na Miranda Soluções &amp; Seguros.</p>
+      </div>
+      <div class="equipe-grid">
+        <article class="membro lider">
+          <figure><img src="assets/equipe/soraia-braz.jpg" alt="Soraia Braz" width="800" height="1000" loading="lazy"><span class="tag">Líder da equipe</span></figure>
+          <h3>Soraia Braz</h3>
+          <span class="cargo">Especialista em Planos de Saúde</span>
+          <p>Lidera a equipe comercial e orienta famílias e empresas na escolha do plano de saúde ideal, comparando redes, coberturas e preços entre as principais operadoras.</p>
+        </article>
+        <article class="membro">
+          <figure><img src="assets/equipe/simony-cordeiro.jpg" alt="Simony Cordeiro" width="640" height="800" loading="lazy"></figure>
+          <h3>Simony Cordeiro</h3>
+          <span class="cargo">Consultora de Seguros</span>
+          <p>Atendimento próximo do primeiro contato à emissão da apólice.</p>
+        </article>
+        <article class="membro">
+          <figure><img src="assets/equipe/audir-faustino.jpg" alt="Audir Faustino" width="640" height="800" loading="lazy"></figure>
+          <h3>Audir Faustino</h3>
+          <span class="cargo">Consultor de Planos de Saúde</span>
+          <p>Acompanha os clientes de plano de saúde com atenção e cuidado, antes e depois da contratação.</p>
+        </article>
       </div>
     </div>
   </section>
