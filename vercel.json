@@ -1,0 +1,74 @@
+{
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/#sobre",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/#sobre",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contato",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/#contato",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#seguros",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/#seguros",
+      "permanent": true
+    },
+    {
+      "source": "/plano-de-saude-empresarial",
+      "destination": "/plano-de-saude-empresarial.html",
+      "permanent": true
+    },
+    {
+      "source": "/plano-de-saude-empresarial/",
+      "destination": "/plano-de-saude-empresarial.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/politica-de-privacidade.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/politica-de-privacidade.html",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
