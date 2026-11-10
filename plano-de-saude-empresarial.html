@@ -26,6 +26,14 @@ fbq('track', 'PageView');
 fbq('track', 'ViewContent', {content_name: 'LP Plano de Saúde Empresarial', content_category: 'Plano de Saúde Empresarial'});
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=509239066232998&ev=PageView&noscript=1"></noscript>
+<!-- Google Ads (tag global) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-865098154"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-865098154');
+</script>
 <style>
 :root{
   --paper:#f6f4f0; --ink:#1b1d22; --ink-2:#4a4d55; --muted:#6a6d75; --line:#d9d3c8;
@@ -364,13 +372,20 @@ footer{background:var(--ink);color:#8d9099;border-top:1px solid rgba(255,255,255
 
   // Meta Pixel
   function pixel(evento, dados){ if (window.fbq) fbq('track', evento, dados || {}); }
-  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => a.addEventListener('click', () => pixel('Contact', {content_name: 'WhatsApp – LP Saúde Empresarial'})));
+
+  // Google Ads: conversões. Preencha o rótulo (parte depois da barra em AW-865098154/RÓTULO) para ativar.
+  const ADS_ID = 'AW-865098154';
+  const ADS_LABEL_LEAD = '';      // conversão "Enviar formulário de cotação"
+  const ADS_LABEL_WHATSAPP = '';  // conversão "Clique no WhatsApp" (opcional)
+  function ads(label){ if (label && window.gtag) gtag('event', 'conversion', {send_to: ADS_ID + '/' + label}); }
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => a.addEventListener('click', () => { pixel('Contact', {content_name: 'WhatsApp – LP Saúde Empresarial'}); ads(ADS_LABEL_WHATSAPP); }));
   document.getElementById('comparar').addEventListener('click', () => pixel('CustomizeProduct', {content_name: 'Simulador de risco', num_items: +colab.value}));
 
   function enviarCotacao(e){
     e.preventDefault();
     const f = e.target;
     pixel('Lead', {content_name: 'LP Plano de Saúde Empresarial', content_category: 'Plano de Saúde Empresarial', vidas: f.vidas.value});
+    ads(ADS_LABEL_LEAD);
     const linhas = [
       'Olá! Quero uma cotação de *plano de saúde empresarial*.',
       '',
